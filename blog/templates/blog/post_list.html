@@ -5,13 +5,13 @@
     <title>Hello</title>
 </head>
 <body>
-    <div>
-        <h1>THE TEST BLOG</h1>
-    </div>
+        {% for post in posts %}
+            <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
 
-    <div>
-        <h2>Post Number One</h2>
-        <p>Ich habe eine auto fur dich. Yo soy Jonah. Unfortunately do not have arabic or russian keyboards set up (not that the ide would allow them)</p>
-    </div>
 </body>
 </html>
